@@ -1,0 +1,15 @@
+{
+    "files.exclude": {
+        "**/.*.meta": true,
+        "**/*.*.meta": true,
+        "**/*.fbx": true,
+        "**/*.FBX": true,
+        "**/*.mat": true,
+        "**/*.prefab": true,
+        "**/*.unity": true,
+        "**/*.unityproj": true,
+        "**/Library": true,
+        "**/ProjectSettings": true,
+        "**/Temp": true
+    }
+}
