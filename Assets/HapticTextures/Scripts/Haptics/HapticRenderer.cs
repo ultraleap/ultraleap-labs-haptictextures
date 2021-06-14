@@ -21,6 +21,8 @@ public class HapticRenderer : MonoBehaviour
         public Chirality chirality;
         public Transform scanPosition = null;
         public Transform hapticPosition = null;
+        [HideInInspector]
+        public Matrix4x4 m44 = new Matrix4x4();
         public RaycastHit handRayResult;        
         [ReadOnly] public Vector3 handVelocity = Vector3.zero;
         [ReadOnly] public float handMagnitude = 0f;
@@ -76,7 +78,7 @@ public class HapticRenderer : MonoBehaviour
     {
         if(_handData.currentHand == null)
         {
-            _hapticRunner.Circle.Intensity = 0;
+            _hapticRunner.SetArgument("intensity", 0);
             return;
         }
 
@@ -94,8 +96,10 @@ public class HapticRenderer : MonoBehaviour
     {
         _textureHand.handVelocity = _currentHand.PalmVelocity.ToVector3();
         _textureHand.handMagnitude = _textureHand.handVelocity.magnitude;
-        _hapticRunner.Circle.SetPosition(_textureHand.hapticPosition);
-        _hapticRunner.Circle.Radius = _hapticRadius;
+        _hapticRunner.SetArgument("position",_textureHand.hapticPosition.position);
+        _textureHand.m44.SetTRS(Vector3.zero,_textureHand.hapticPosition.rotation,Vector3.one);
+        //_hapticRunner.SetArgument("rotation",_textureHand.m44.transpose);
+        _hapticRunner.SetArgument("radius",_hapticRadius);
         CalcScanFeatures(_textureHand, RaycastToTexture(_textureHand.scanPosition, _raycastLengthDown, out _textureHand.handRayResult));
     }
 
@@ -113,32 +117,32 @@ public class HapticRenderer : MonoBehaviour
         {
                 if (_modulateIntensityByHandVelocity)
                 {
-                    _hapticRunner.Circle.Intensity = HeightValue(
+                    _hapticRunner.SetArgument("intensity",HeightValue(
                                 _hand.handRayResult.textureCoord,
                                 _attribute.HeightMap,
                                 _attribute.MinIntensity,
-                                _attribute.MaxIntensity * GetModulatedIntensityByHandVelocity(_hand.handMagnitude));
+                                _attribute.MaxIntensity * GetModulatedIntensityByHandVelocity(_hand.handMagnitude)));
                 }
                 else
                 {
-                    _hapticRunner.Circle.Intensity = HeightValue(
+                    _hapticRunner.SetArgument("intensity", HeightValue(
                                 _hand.handRayResult.textureCoord,
                                 _attribute.HeightMap,
                                 _attribute.MinIntensity,
-                                _attribute.MaxIntensity);
+                                _attribute.MaxIntensity));
                 }
                 if (_modulateFrequencyByHandVelocity)
                 {
-                    _hapticRunner.Circle.Frequency = _attribute.Smoothness + ((_attribute.Smoothness / 2) * GetModulatedFrequencyByHandVelocity(_hand.handMagnitude));
+                    _hapticRunner.SetArgument("frequency",_attribute.Smoothness + ((_attribute.Smoothness / 2) * GetModulatedFrequencyByHandVelocity(_hand.handMagnitude)));
                 }
                 else
                 {
-                    _hapticRunner.Circle.Frequency = _attribute.Smoothness;
+                    _hapticRunner.SetArgument("frequency", _attribute.Smoothness);
                 }
         }
         else
         {
-            _hapticRunner.Circle.Intensity = 0;
+            _hapticRunner.SetArgument("intensity",0);
         }
     }
 

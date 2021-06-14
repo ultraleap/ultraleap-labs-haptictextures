@@ -11,10 +11,13 @@ using Vector3 = System.Numerics.Vector3;
 /// </summary>
 public class HapticRunner : MonoBehaviour
 {
-    public HapticCircle Circle = new HapticCircle();
     private Library _library;
     private IDevice _device;
-    private StreamingEmitter _streamingEmitter;
+    private SensationEmitter _sensationEmitter;
+    private SensationPackage _sensationPackage;
+    private Sensation _sensation;
+    private Sensation.Instance _sensationInstance;
+    public Sensation.Instance sensation { get{ return _sensationInstance;} }
     private DateTime _startTime;
 
     private void OnEnable()
@@ -41,35 +44,76 @@ public class HapticRunner : MonoBehaviour
             return;
         }
 
-        _streamingEmitter = new StreamingEmitter(_library);
+        _sensationEmitter = new SensationEmitter(_library);
 
-        _streamingEmitter.Devices.Add(_device, new Ultraleap.Haptics.Transform());
+        _sensationEmitter.Devices.Add(_device, new Ultraleap.Haptics.Transform());
 
-        _streamingEmitter.SetControlPointCount(1, AdjustRate.AsRequired);
-        _streamingEmitter.EmissionCallback = Callback;
-        _streamingEmitter.Start();
+        try
+        {
+            _sensationPackage = SensationPackage.LoadFromFile(_library, Application.streamingAssetsPath + "/StandardSensations.ssp");
+        }
+        catch
+        {
+            Debug.LogError("No Sensation Package Loaded.");
+            return;
+        }
+        
+        try
+        {
+            _sensation = _sensationPackage.GetSensation("CircleWithFixedFrequency");
+            _sensationInstance = _sensation.MakeInstance();
+
+            // Initialise sensation with base params.
+            _sensationEmitter.SetSensation(_sensationInstance);
+            _sensationInstance.Set("position",new[] {0f,0f,0f});
+            _sensationInstance.Set("radius",0.0318f);
+            _sensationInstance.Set("frequency",60f);
+            _sensationInstance.Set("intensity",0);
+            _sensationEmitter.UpdateSensationArguments(_sensationInstance);
+
+        }
+        catch(Exception ex)
+        {
+            Debug.LogError("ERROR! " + ex.ToString());
+            _sensationEmitter = null;
+        }
+        _sensationEmitter?.Start();
         _startTime = DateTime.Now;
+    }
+
+    public void SetArgument(string argument, UnityEngine.Vector3 value)
+    {
+        if(_sensationInstance == null)
+            return;
+        _sensationInstance.Set(argument,new[]{value.x,value.z,value.y});
+        _sensationEmitter.UpdateSensationArguments(_sensationInstance);
+    }
+
+    public void SetArgument(string argument, float value)
+    {
+        if(_sensationInstance == null)
+            return;
+        _sensationInstance.Set(argument,value);
+        _sensationEmitter.UpdateSensationArguments(_sensationInstance);
+    }
+
+    public void SetArgument(string argument, UnityEngine.Matrix4x4 value)
+    {
+        if(_sensationInstance == null)
+            return;
+
+        _sensationInstance.Set(argument, new[]{
+            value[0,0],value[0,1],value[0,2],
+            value[1,0],value[1,1],value[1,2],
+            value[2,0],value[2,1],value[2,2]});
+        _sensationEmitter.UpdateSensationArguments(_sensationInstance);
     }
 
     private void OnDisable()
     {
           // Dispose/destroy the emitter
-        _streamingEmitter.Stop();
-        _streamingEmitter.Dispose();
-        _streamingEmitter = null;
-    }
-
-    // This callback is called every time the device is ready to accept new control point information
-    private void Callback(StreamingEmitter emitter, StreamingEmitter.Interval interval, DateTimeOffset submissionDeadline)
-    {
-        // For each time point in this interval...
-        foreach (var sample in interval)
-        {
-            double seconds = (sample.Time - _startTime).TotalSeconds;
-
-            Vector3 pos = Circle.EvaluateAt(seconds);
-            sample.Points[0].Position = pos;
-            sample.Points[0].Intensity = Circle.Intensity;
-        }
+        _sensationEmitter?.Stop();
+        _library?.Disconnect();
+        _library?.Dispose();
     }
 }
