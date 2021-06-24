@@ -98,7 +98,6 @@ public class HapticRenderer : MonoBehaviour
         _textureHand.handMagnitude = _textureHand.handVelocity.magnitude;
         _hapticRunner.SetArgument("position",_textureHand.hapticPosition.position);
         _textureHand.m44.SetTRS(Vector3.zero,_textureHand.hapticPosition.rotation,Vector3.one);
-        //_hapticRunner.SetArgument("rotation",_textureHand.m44.transpose);
         _hapticRunner.SetArgument("radius",_hapticRadius);
         CalcScanFeatures(_textureHand, RaycastToTexture(_textureHand.scanPosition, _raycastLengthDown, out _textureHand.handRayResult));
     }
@@ -119,25 +118,25 @@ public class HapticRenderer : MonoBehaviour
                 {
                     _hapticRunner.SetArgument("intensity",HeightValue(
                                 _hand.handRayResult.textureCoord,
-                                _attribute.HeightMap,
-                                _attribute.MinIntensity,
-                                _attribute.MaxIntensity * GetModulatedIntensityByHandVelocity(_hand.handMagnitude)));
+                                _attribute.heightMap,
+                                _attribute.texture.intensityMin,
+                                _attribute.texture.intensityMax * GetModulatedIntensityByHandVelocity(_hand.handMagnitude)));
                 }
                 else
                 {
                     _hapticRunner.SetArgument("intensity", HeightValue(
                                 _hand.handRayResult.textureCoord,
-                                _attribute.HeightMap,
-                                _attribute.MinIntensity,
-                                _attribute.MaxIntensity));
+                                _attribute.heightMap,
+                                _attribute.texture.intensityMin,
+                                _attribute.texture.intensityMax));
                 }
                 if (_modulateFrequencyByHandVelocity)
                 {
-                    _hapticRunner.SetArgument("frequency",_attribute.Smoothness + ((_attribute.Smoothness / 2) * GetModulatedFrequencyByHandVelocity(_hand.handMagnitude)));
+                    _hapticRunner.SetArgument("frequency",_attribute.texture.drawFrequency + ((_attribute.texture.drawFrequency / 2) * GetModulatedFrequencyByHandVelocity(_hand.handMagnitude)));
                 }
                 else
                 {
-                    _hapticRunner.SetArgument("frequency", _attribute.Smoothness);
+                    _hapticRunner.SetArgument("frequency", _attribute.texture.drawFrequency);
                 }
         }
         else
@@ -172,7 +171,7 @@ public class HapticRenderer : MonoBehaviour
             if (_raycastHit.transform != null)
             {
                 ta = _raycastHit.transform.GetComponent<TextureAttributes>();
-                if (ta != null)
+                if (ta != null && ta.texture != null)
                 {
                     return ta;
                 }
