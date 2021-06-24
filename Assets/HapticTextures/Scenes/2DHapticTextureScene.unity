@@ -134,7 +134,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d93e3f44cc89c024f830012931c0fd17, type: 2}
+      objectReference: {fileID: 2100000, guid: 5c6efd6e76b5cc5409a29ca9f656100c, type: 2}
     - target: {fileID: 1647852117009216050, guid: 54e3ccc41d9bb4145bb14b7226ccd61c,
         type: 3}
       propertyPath: m_Name
@@ -210,7 +210,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1723583787302137720, guid: 54e3ccc41d9bb4145bb14b7226ccd61c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 54e3ccc41d9bb4145bb14b7226ccd61c, type: 3}
 --- !u!1 &16529562 stripped
 GameObject:
@@ -218,18 +219,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 16529561}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &16529563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!23 &16529563 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 815686986563282338, guid: 54e3ccc41d9bb4145bb14b7226ccd61c,
+    type: 3}
+  m_PrefabInstance: {fileID: 16529561}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 16529562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38e516637dfe85143812a418ae79e481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &16529564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,11 +234,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 16529562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f8f6995a745f6d409aa201a765923ec, type: 3}
+  m_Script: {fileID: 11500000, guid: d3dfcbd1cfb2d9e48806e58fb2800fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelAsset: {fileID: 5022602860645237092, guid: 88a955e0f026d2a458bf732353640eba,
-    type: 3}
+  texture: {fileID: 11400000, guid: 4a3cc1411186ba1458a87c7a01485fdc, type: 2}
+  currentRenderer: {fileID: 16529563}
+  heightMap: {fileID: 2800000, guid: aa295c2e53f64a64683c4f0c23b279fa, type: 3}
+  heightMapSize: {x: 0.29999998, y: 6.661338e-18, z: 0.29999998}
+  heightMapPos: {x: 0, y: 0.2, z: 0}
+  minBounds: {x: -0.14999999, y: 0, z: -0.14999999}
+  maxBounds: {x: 0.14999999, y: 0, z: 0.14999999}
 --- !u!1001 &17504544
 PrefabInstance:
   m_ObjectHideFlags: 0

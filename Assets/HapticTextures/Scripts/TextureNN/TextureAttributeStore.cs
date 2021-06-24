@@ -7,5 +7,5 @@ public class TextureAttributeStore : ScriptableObject
 
     public float drawFrequency = 0;
 
-    public float intensityMin = 0, intensityMax = 1;
+    public float intensityMin = 0.5f, intensityMax = 1;
 }
