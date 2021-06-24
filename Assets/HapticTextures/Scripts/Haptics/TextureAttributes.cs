@@ -26,7 +26,7 @@ public class TextureAttributes : MonoBehaviour
     private void UpdateTexture()
     {
         currentRenderer = GetComponent<Renderer>();
-        heightMap = currentRenderer.sharedMaterial.GetTexture("_DispTex") as Texture2D;
+        heightMap = currentRenderer.sharedMaterial.GetTexture("_ParallaxMap") as Texture2D;
         heightMapSize = currentRenderer.bounds.size;
         heightMapPos = currentRenderer.transform.position;
         minBounds = GetMinBounds(heightMapSize, heightMapPos);
