@@ -134,7 +134,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5c6efd6e76b5cc5409a29ca9f656100c, type: 2}
+      objectReference: {fileID: 2100000, guid: 8f099e5276d78c24dac540504613234d, type: 2}
     - target: {fileID: 1647852117009216050, guid: 54e3ccc41d9bb4145bb14b7226ccd61c,
         type: 3}
       propertyPath: m_Name
@@ -237,9 +237,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3dfcbd1cfb2d9e48806e58fb2800fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 11400000, guid: 4a3cc1411186ba1458a87c7a01485fdc, type: 2}
+  texture: {fileID: 11400000, guid: c9b1a305b53043844a0de6761408b885, type: 2}
   currentRenderer: {fileID: 16529563}
-  heightMap: {fileID: 2800000, guid: aa295c2e53f64a64683c4f0c23b279fa, type: 3}
+  heightMap: {fileID: 2800000, guid: 885b49060351f6a448742d0473e7a2ab, type: 3}
   heightMapSize: {x: 0.29999998, y: 6.661338e-18, z: 0.29999998}
   heightMapPos: {x: 0, y: 0.2, z: 0}
   minBounds: {x: -0.14999999, y: 0, z: -0.14999999}
@@ -831,7 +831,7 @@ PrefabInstance:
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _hapticRadius
-      value: 0.0318
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
@@ -851,12 +851,12 @@ PrefabInstance:
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _raycastLengthDown
-      value: 0.2
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _handVelocityThreshold
-      value: 0
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
@@ -902,22 +902,22 @@ PrefabInstance:
         type: 3}
       propertyPath: _hands.Array.data[0].scanPosition
       value: 
-      objectReference: {fileID: 228360701}
+      objectReference: {fileID: 1552526585}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _hands.Array.data[1].scanPosition
       value: 
-      objectReference: {fileID: 1474495820}
+      objectReference: {fileID: 1913833845}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _hands.Array.data[0].hapticPosition
       value: 
-      objectReference: {fileID: 228360701}
+      objectReference: {fileID: 1552526585}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _hands.Array.data[1].hapticPosition
       value: 
-      objectReference: {fileID: 1474495820}
+      objectReference: {fileID: 1913833845}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _frequencyCurve.m_Curve.Array.data[0].time
@@ -2693,6 +2693,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1760649901}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1552526585 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 414404, guid: 23f2cce114628a448bfeaae171b4c0c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 943239704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1569450275
 GameObject:
   m_ObjectHideFlags: 0
@@ -3429,6 +3435,12 @@ MonoBehaviour:
 --- !u!4 &1760649903 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 434850, guid: c8515ebee271c0649b9db1321f3026a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1760649901}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1913833845 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 467038, guid: c8515ebee271c0649b9db1321f3026a4,
     type: 3}
   m_PrefabInstance: {fileID: 1760649901}
   m_PrefabAsset: {fileID: 0}

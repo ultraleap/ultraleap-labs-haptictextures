@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1f6ffde361ed6a46b90af80b68cf288, type: 3}
   m_Name: corrugated steel orange_col Texture Store
   m_EditorClassIdentifier: 
-  predictedRoughness: 0.44304237
-  predictedFrequency: 46.58
-  drawFrequency: 46.58
+  predictedRoughness: 0.45934698
+  predictedFrequency: 47.56
+  drawFrequency: 47.56
   intensityMin: 0.5
   intensityMax: 1
