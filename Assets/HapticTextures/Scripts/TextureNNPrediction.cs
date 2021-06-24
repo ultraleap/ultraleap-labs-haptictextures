@@ -19,7 +19,7 @@ public class TextureNNPrediction
     public static void SetFeatures()
     {
         calculating = false;
-        drawFrequency = Mathf.Lerp(20, 80, predictedRoughness);
+        drawFrequency = (float)Math.Round(Mathf.Lerp(20, 80, predictedRoughness), 2);
         OnGeneratedFeatures?.Invoke(predictedRoughness, drawFrequency);
         OnGeneratedFeatures = null;
     }
