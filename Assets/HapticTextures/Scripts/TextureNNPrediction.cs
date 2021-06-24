@@ -5,7 +5,7 @@ using System;
 using UnityEditor;
 
 [ExecuteAlways]
-public class TextureNNPrediction : MonoBehaviour
+public class TextureNNPrediction
 {
 
     public static bool calculating = false;
