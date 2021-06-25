@@ -15,5 +15,5 @@ MonoBehaviour:
   predictedRoughness: 0.6934557
   predictedFrequency: 61.61
   drawFrequency: 61.61
-  intensityMin: 0.5
+  intensityMin: 0.2
   intensityMax: 1

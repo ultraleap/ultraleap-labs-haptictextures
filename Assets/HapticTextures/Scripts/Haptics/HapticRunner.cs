@@ -66,7 +66,7 @@ public class HapticRunner : MonoBehaviour
             // Initialise sensation with base params.
             _sensationEmitter.SetSensation(_sensationInstance);
             _sensationInstance.Set("position",new[] {0f,0f,0f});
-            _sensationInstance.Set("radius",0.0318f);
+            _sensationInstance.Set("radius",0.02f);
             _sensationInstance.Set("frequency",60f);
             _sensationInstance.Set("intensity",0);
             _sensationEmitter.UpdateSensationArguments(_sensationInstance);

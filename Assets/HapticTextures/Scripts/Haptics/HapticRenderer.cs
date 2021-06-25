@@ -37,18 +37,21 @@ public class HapticRenderer : MonoBehaviour
 
     [SerializeField]
     private List<TextureHandProperties> _hands = new List<TextureHandProperties>();
+    
+    [SerializeField,Range(0.001f,0.05f)]
+    private float _hapticRadius = 0.02f;
 
     [SerializeField]
     private float _handVelocityThreshold, _raycastLengthDown;
 
     [SerializeField]
-    private AnimationCurve _frequencyCurve, _intensityCurve;
+    private AnimationCurve _intensityCurve;
 
-    [SerializeField,Range(0.001f,0.05f)]
-    private float _hapticRadius = 0.02f;
+    private AnimationCurve _frequencyCurve;
 
     [SerializeField]
-    private bool _modulateIntensityByHandVelocity = false, _modulateFrequencyByHandVelocity = false, _alwaysOn = false;
+    private bool _modulateIntensityByHandVelocity = true, _alwaysOn = false;
+    private bool _modulateFrequencyByHandVelocity = false;
 
     private float _currentHandVelocityThreshold;
 
@@ -132,7 +135,7 @@ public class HapticRenderer : MonoBehaviour
                 }
                 if (_modulateFrequencyByHandVelocity)
                 {
-                    _hapticRunner.SetArgument("frequency",_attribute.texture.drawFrequency + ((_attribute.texture.drawFrequency / 2) * GetModulatedFrequencyByHandVelocity(_hand.handMagnitude)));
+                    _hapticRunner.SetArgument("frequency", _attribute.texture.drawFrequency + (_attribute.texture.drawFrequency/2) * GetModulatedFrequencyByHandVelocity(_hand.handMagnitude));
                 }
                 else
                 {
