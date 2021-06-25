@@ -861,17 +861,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 140659494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6cdcd4eb616d5b4ca5f2756e099eded, type: 3}
+  m_Script: {fileID: 11500000, guid: d3dfcbd1cfb2d9e48806e58fb2800fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _heightMap: {fileID: 0}
-  _hapticSmoothness: 0
-  _minIntensity: 0
-  _maxIntensity: 0
-  _heightMapSize: {x: 0, y: 0, z: 0}
-  _heightMapPos: {x: 0, y: 0, z: 0}
-  _minBounds: {x: 0, y: 0, z: 0}
-  _maxBounds: {x: 0, y: 0, z: 0}
+  texture: {fileID: 11400000, guid: 8a243daeb3ec05741bf65229619e6b73, type: 2}
+  currentRenderer: {fileID: 140659497}
+  heightMap: {fileID: 2800000, guid: b045dee532fac4e47ad48b3c73f75335, type: 3}
+  heightMapSize: {x: 0.26149982, y: 0.09389427, z: 0.252931}
+  heightMapPos: {x: -0.16, y: 0.2, z: 0}
+  minBounds: {x: -0.2907499, y: 0, z: -0.1264655}
+  maxBounds: {x: -0.029250085, y: 0, z: 0.1264655}
 --- !u!23 &140659497
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2148,17 +2147,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 636902336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6cdcd4eb616d5b4ca5f2756e099eded, type: 3}
+  m_Script: {fileID: 11500000, guid: d3dfcbd1cfb2d9e48806e58fb2800fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _heightMap: {fileID: 0}
-  _hapticSmoothness: 0
-  _minIntensity: 0
-  _maxIntensity: 0
-  _heightMapSize: {x: 0, y: 0, z: 0}
-  _heightMapPos: {x: 0, y: 0, z: 0}
-  _minBounds: {x: 0, y: 0, z: 0}
-  _maxBounds: {x: 0, y: 0, z: 0}
+  texture: {fileID: 11400000, guid: f3488a5f6e83c3b44877bafae0ac38db, type: 2}
+  currentRenderer: {fileID: 636902338}
+  heightMap: {fileID: 2800000, guid: 793ed8b5aa611284d8f0d3813cc83e6a, type: 3}
+  heightMapSize: {x: 0.26149985, y: 0.09389427, z: 0.25293106}
+  heightMapPos: {x: 0.16, y: 0.2, z: 0}
+  minBounds: {x: 0.02925007, y: 0, z: -0.12646553}
+  maxBounds: {x: 0.2907499, y: 0, z: 0.12646553}
+--- !u!4 &749731755 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 467038, guid: c8515ebee271c0649b9db1321f3026a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1948043232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &854570394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2671,7 +2675,7 @@ PrefabInstance:
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _raycastLengthDown
-      value: 0.1
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
@@ -2691,7 +2695,7 @@ PrefabInstance:
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _handVelocityThreshold
-      value: 0.02
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
@@ -2752,12 +2756,22 @@ PrefabInstance:
         type: 3}
       propertyPath: _hands.Array.data[0].scanPosition
       value: 
-      objectReference: {fileID: 64026703}
+      objectReference: {fileID: 1610273768}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _hands.Array.data[1].scanPosition
       value: 
-      objectReference: {fileID: 1948043234}
+      objectReference: {fileID: 749731755}
+    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: _hands.Array.data[0].hapticPosition
+      value: 
+      objectReference: {fileID: 1610273768}
+    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: _hands.Array.data[1].hapticPosition
+      value: 
+      objectReference: {fileID: 749731755}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _frequencyCurve.m_Curve.Array.data[0].time
@@ -2770,13 +2784,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
+      propertyPath: _intensityCurve.m_Curve.Array.data[1].time
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
       propertyPath: _frequencyCurve.m_Curve.Array.data[0].value
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _intensityCurve.m_Curve.Array.data[0].value
-      value: 1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
@@ -2791,12 +2810,12 @@ PrefabInstance:
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _intensityCurve.m_Curve.Array.data[0].inSlope
-      value: 0
+      value: 4.8921814
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _intensityCurve.m_Curve.Array.data[1].inSlope
-      value: 0
+      value: -0.02774632
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
@@ -2815,18 +2834,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
-      propertyPath: _intensityCurve.m_Curve.Array.data[0].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _intensityCurve.m_Curve.Array.data[1].inWeight
+      propertyPath: _intensityCurve.m_Curve.Array.data[0].inWeight
       value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
+      propertyPath: _intensityCurve.m_Curve.Array.data[0].outSlope
+      value: 4.8921814
+      objectReference: {fileID: 0}
+    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: _intensityCurve.m_Curve.Array.data[1].inWeight
+      value: 0.21249995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
       propertyPath: _intensityCurve.m_Curve.Array.data[1].outSlope
-      value: 0
+      value: -0.02774632
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
@@ -2836,7 +2860,7 @@ PrefabInstance:
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _intensityCurve.m_Curve.Array.data[0].outWeight
-      value: 0.33333334
+      value: 0.058333337
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
@@ -2851,12 +2875,12 @@ PrefabInstance:
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _intensityCurve.m_Curve.Array.data[0].tangentMode
-      value: 34
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _intensityCurve.m_Curve.Array.data[1].tangentMode
-      value: 34
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3972202724825150127, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
@@ -3268,6 +3292,12 @@ Transform:
   m_Father: {fileID: 461333336}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!4 &1610273768 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 414404, guid: 23f2cce114628a448bfeaae171b4c0c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 64026701}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1841996587
 GameObject:
   m_ObjectHideFlags: 0
