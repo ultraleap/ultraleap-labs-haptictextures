@@ -14,7 +14,7 @@ __pycache__/
 
 # Visual Studio cache directory
 .vs/
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -46,7 +46,7 @@ ExportedObj/
 
 # Unity3D generated meta files
 *.pidb.meta
-*.pdb.meta
+*.pdb.metagit 
 *.mdb.meta
 
 # Unity3D generated file on crash reports
@@ -64,4 +64,4 @@ crashlytics-build.properties
 [Aa]ssets/PLugins/LeapMotion.meta
 [Aa]ssets/Plugins/Ultrahaptics/*
 
-UserSettings/*
+/[Us]erSettings/*
