@@ -60,4 +60,4 @@ crashlytics-build.properties
 [Aa]ssets/PLugins/LeapMotion.meta
 [Aa]ssets/Plugins/Ultrahaptics/*
 
-/UserSettings/*
+UserSettings/*
