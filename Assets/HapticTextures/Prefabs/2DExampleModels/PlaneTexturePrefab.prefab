@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1647852117009216050
+--- !u!1 &6931471683267680296
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4441713679062821223}
-  - component: {fileID: 3959820222213458765}
-  - component: {fileID: 815686986563282338}
-  - component: {fileID: 881946187811849419}
-  - component: {fileID: 1723583787302137720}
+  - component: {fileID: 1376279659289661772}
+  - component: {fileID: 546513732964748186}
+  - component: {fileID: 7620754281282368481}
+  - component: {fileID: 6573964532833147215}
+  - component: {fileID: 8245295566966659446}
   m_Layer: 0
   m_Name: PlaneTexturePrefab
   m_TagString: Untagged
@@ -20,35 +20,49 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4441713679062821223
+--- !u!4 &1376279659289661772
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647852117009216050}
+  m_GameObject: {fileID: 6931471683267680296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.2, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3959820222213458765
+--- !u!33 &546513732964748186
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647852117009216050}
+  m_GameObject: {fileID: 6931471683267680296}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &815686986563282338
+--- !u!64 &7620754281282368481
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6931471683267680296}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &6573964532833147215
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647852117009216050}
+  m_GameObject: {fileID: 6931471683267680296}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,10 +70,12 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a739a020b44611c4594753b275bec5fd, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,37 +96,23 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &881946187811849419
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647852117009216050}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1723583787302137720
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8245295566966659446
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647852117009216050}
+  m_GameObject: {fileID: 6931471683267680296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6cdcd4eb616d5b4ca5f2756e099eded, type: 3}
+  m_Script: {fileID: 11500000, guid: d3dfcbd1cfb2d9e48806e58fb2800fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _heightMap: {fileID: 0}
-  _hapticSmoothness: 0
-  _minIntensity: 0
-  _maxIntensity: 0
-  _heightMapSize: {x: 0, y: 0, z: 0}
-  _heightMapPos: {x: 0, y: 0, z: 0}
-  _minBounds: {x: 0, y: 0, z: 0}
-  _maxBounds: {x: 0, y: 0, z: 0}
+  texture: {fileID: 0}
+  currentRenderer: {fileID: 6573964532833147215}
+  heightMap: {fileID: 2800000, guid: b045dee532fac4e47ad48b3c73f75335, type: 3}
+  heightMapSize: {x: 0.29999998, y: 6.661338e-18, z: 0.29999998}
+  heightMapPos: {x: 0, y: 0.2, z: 0}
+  minBounds: {x: -0.14999999, y: 0, z: -0.14999999}
+  maxBounds: {x: 0.14999999, y: 0, z: 0.14999999}

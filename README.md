@@ -1,5 +1,5 @@
-# Mid-Air Haptic Texture: Modulating Sensation Intensity from Image Displacement Maps
-This textures open-source project is part of an internal research project exploring the possibility of rendering varying surface textures using a UH device. This work currently enables the generation of haptic textures from images by modulating haptic sensation intensity via image displacement map greyscale values. From this information, the roughness and bumpiness of a texture can be effectively presented using ultrasonic mid-air haptics. In addition, both visual and haptic feedback are directly linked which ensures congruency for the user whilst exploring a visuo-haptic texture.
+# Mid-Air Haptic Textures: Translating Image Features to Produce Haptic Feedback
+This project is part of an internal research project exploring the possibility of rendering surface textures using an Ultraleap haptic array. This project allows users to generate haptic sensations from images by modulating intensity via image displacement map greyscale values. The draw frequency of the sensation is also automatically set based on the output from a neural network that takes as input various statistical features calculate from the pixel values in an image. These features correspond to how much roughness is contained within the image. This roughness is then varied by adjusting the draw frequency of the haptic feedback. In addition, both visual and haptic feedback are directly linked which ensures congruency for the user whilst exploring a visuo-haptic texture.
 
 ## About
 This repository contains the following:
@@ -8,16 +8,14 @@ This repository contains the following:
 * C# scripts responsible for processing and rendering different haptic textural sensations.
 * Two simple (2D & 3D) demo scenes presenting their application in 2D and 3D environments.
 * A small repository of sample textures.
-* A customised texture shader, that contains variables related to haptic sensation (smoothness, intensity range).
-* A basic texture material with the customised texture shader attached.
-* Prefab gameobjects with correct components, material, and shader attached: 
+* Prefab gameobjects with corresponding texture components attached: 
 	- 2D Plane gameobject.
 	- 3D Cube demo gameobject.
 
 This Unity project can be run on both Ultrahaptics "STRATOS" series hardware (Inspire & Explore).
 
 #### What does this project do?
-Contained within this project are scripts that enable the generation of haptic textures. Images and their associated displacement maps can be imported then used to modulate the intensity of a haptic sensation. This modulation produces variation in two textural qualities: roughness and bumpiness. From this information, a variety of material surface topographies can be simulated.
+Contained within this project are scripts that enable the generation of haptic textures. Images and their associated displacement maps can be imported and used to modulate the intensity of a haptic sensation. Moreover this project contains a pre-trained neural network that is used to automatically calculate the draw frequency of each image-based haptic sensation in order to convey different sensations of roughness.
 
 You can use your own textured images provided they have an appropriate displacement map.
 
@@ -39,7 +37,8 @@ In order explore this project and create your own haptic textures there are some
 	- (Windows: v4 https://developer-archive.leapmotion.com/downloads/external/v4-developer-beta/windows)
  	- (Mac: v2 https://developer.leapmotion.com/sdk/v2)
 * Leap Motion Core Assets Unity Package: https://developer.leapmotion.com/unity
-* This project was built using Unity 2019.2.11f1, but should work with other Unity versions with minimal effort.
+* This project was built using Unity 2020.3.2f1, but should work with other Unity versions (not tested).
+* Will import with a dependency on Unity's 'Python for Unity' experimental package. This will be installed through the Unity package manager by default. 
 
 ## Usage
 
@@ -55,14 +54,13 @@ In order explore this project and create your own haptic textures there are some
 The following describes how to set up a new scene in a similar fashion to our demo scenes, in order to interact with Haptic Textures.
 
 1. Add the Leap Hand Controller prefab to the scene (Assets/LeapMotion/Prefabs/Misc/LeapHandController) and set it up per your preference.
-2. Add the HandData script to the Leap Hand Controller game object.
+2. Add the HandData script to the Leap Hand Controller game object and set the 'Leap Provider' as the LeapHandController prefab. Set up the 'Hand Model Manager' script so that the model pool contains 2 elements, where the first element has references to the 'LoPoly Rigged Hand' and the second element references the 'RigidRoundHand' model. Ensure the 'IsEnabled' box is checked.
 3. Add the [Haptics] prefab to the scene (Assets/Prefabs/[Haptics])
-4. On [Haptics], set the amount of hands you require in the scene, 2 for Left and Right. Set the Chirality of each of these accordingly.Then assign the "ScanPosition" (we currently use bone2 of the middle finger on the left hand and right hand).
-5. Setup the HapticRunner Hand Positions in the in the same manner.
-     - **TIP:** *Scan position in Haptic Renderer is the position on the hand where we raycast from onto the texture, in order to find the displacement. Hand Positions in Haptic Runner are where we then project the haptic feedback. Feel free to change and experiment with these values!*
+4. Within [Haptics], in the 'Haptic Renderer' script, set the amount of hands you require in the scene. Assign the "ScanPosition" (we currently use bone2 of the middle finger on the left hand and right hand), and assign a location on the hand where you want the haptics to be played.
+	**TIP:** *Scan position in Haptic Renderer is the position on the hand where we raycast from onto the texture, in order to find the displacement. Hand Positions in Haptic Runner are where we then project the haptic feedback. Feel free to change and experiment with these values!*
 6. Add the model you want to apply textures into the scene. 
 7. The model needs the following:
-     - A mesh collider (non-convex).
+     - A mesh renderer with a basic material and standard shader (with image as albedo, height map + normal map etc).
      - A Texture Attributes script.
 
 #### Texture Importing
@@ -73,19 +71,16 @@ However, it is possible to create your own textures!
 To do so follow these steps:
 
 1. Create a new folder within the /Assets/Textures/ folder entitled the texture/image you wish to use.
-2. Grab the "BasicTextureMaterial" in /Assets/Prefabs/ and copy it into your newly created folder. Rename it.
-3. In this folder, copy in your texture image, and displacement map (grey-scale image), along with any additional material component you wish to use (metallic, normal map etc).
-	- **TIP:** *Make sure to enhance the contrast and saturation on your displacement map, so separation between white and black values is clearly distinguished. This will improve haptic rendering.*
-4. Select the material in Unity and in each of its corresponding texture selection options, assign the correct image. i.e. place the displacement map into the "Disp Texture" selection window.
-5. Select the displacement map from the texture folder. Ensure that "Read/Write Enable" is se to "True" from within the "Advanced" drop-down menu.
+2. In this folder, copy in your texture image, and displacement map (grey-scale image), along with any additional material component you wish to use (metallic, normal map etc).
+	- **TIP:** *Make sure to enhance the contrast and saturation on your displacement map, so separation between white and black values is clearly distinguished. This will improve haptic rendering!*
+4. Create an empty game object within this folder and attach a basic material object with a standard shader, and a 'Texture Attributes' script. Attach each of the corresponding images to the material i.e. place the image into the "Albedo" selection window.
+5. Within the 'Texture Attributes' script you can press the 'Calculate' button and the script will automatically determine the appropriate draw frequency for the given roughness contained within the image. There are additional slider to further adjust both draw frequency and intensity.
 
-You will see that on your newly created texture, a "BasicTextureShader" will be assigned. This shader contains a number of haptic parameters that can be altered in order to adjust the sensation.
-
-* **Haptic Smoothness** - This value can be adjusted from 20 - 80. A higher value will yield a smoother sensation.
-* **Haptic Intensity Minimum/Maximum** - These values will allow you to adjust the variance between the intensity values used for the haptic sensation. It is best to keep the maximum setting at 1. Bringing the minimum value closer to 1 will result in a flatter texture, and again feel smooth.
+* **Draw Frequency** - This value can be adjusted from 20 - 80. A higher value will yield a smoother sensation.
+* **Intensity Minimum/Maximum** - These values will allow you to adjust the variance between the intensity values used for the haptic sensation. It is best to keep the maximum setting at 1. Bringing the minimum value closer to 1 will result in a flatter texture, and again feel smooth.
 
 ## License
-This project is open-sourced under the Apache V2 license. The textures used within this repo were obtained at https://www.cc0textures.com.
+This project is open-sourced under Ultraleap's proprietary closed-source license. The textures used within this repo were obtained at https://www.cc0textures.com.
 
 ## Support, Contact & Contribution
 For any questions regarding this project, please contact david.beattie@ultraleap.com. Alternatively, please branch this repo and leave comments so we can keep up to date with any requests and issues.

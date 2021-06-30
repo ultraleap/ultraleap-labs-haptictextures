@@ -812,12 +812,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ea79be653ce14db8969d7225d95ec6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &64026703 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 451232, guid: 23f2cce114628a448bfeaae171b4c0c0,
-    type: 3}
-  m_PrefabInstance: {fileID: 64026701}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &140659494
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,7 +858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3dfcbd1cfb2d9e48806e58fb2800fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 11400000, guid: 8a243daeb3ec05741bf65229619e6b73, type: 2}
+  texture: {fileID: 0}
   currentRenderer: {fileID: 140659497}
   heightMap: {fileID: 2800000, guid: b045dee532fac4e47ad48b3c73f75335, type: 3}
   heightMapSize: {x: 0.26149982, y: 0.09389427, z: 0.252931}
@@ -2640,390 +2634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0ed5922e911b343b8400997c95409c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1063036568
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _alwaysOn
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _leapProvider
-      value: 
-      objectReference: {fileID: 268049249}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _raycastLength
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _raycastLengthUp
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _hands.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _raycastLengthDown
-      value: 0.075
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: LeftHandScanPosition
-      value: 
-      objectReference: {fileID: 64026703}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _lastEnteredVelocity
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: RightHandScanPosition
-      value: 
-      objectReference: {fileID: 1948043234}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _handVelocityThreshold
-      value: 0.025
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _textureObjects.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _scanPosition.Array.data[0]
-      value: 
-      objectReference: {fileID: 64026703}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _scanPosition.Array.data[1]
-      value: 
-      objectReference: {fileID: 1948043234}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _handScanPosition.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _textureObjects.Array.data[0]
-      value: 
-      objectReference: {fileID: 140659494}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _textureObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 636902336}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _hands.Array.data[1].chirality
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _handScanPosition.Array.data[0]
-      value: 
-      objectReference: {fileID: 64026703}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _handScanPosition.Array.data[1]
-      value: 
-      objectReference: {fileID: 1948043234}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _ModulateIntensityByHandVelocity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _modulateIntensityByHandVelocity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _hands.Array.data[0].scanPosition
-      value: 
-      objectReference: {fileID: 1610273768}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _hands.Array.data[1].scanPosition
-      value: 
-      objectReference: {fileID: 749731755}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _hands.Array.data[0].hapticPosition
-      value: 
-      objectReference: {fileID: 1610273768}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _hands.Array.data[1].hapticPosition
-      value: 
-      objectReference: {fileID: 749731755}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _frequencyCurve.m_Curve.Array.data[0].time
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _intensityCurve.m_Curve.Array.data[0].time
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _intensityCurve.m_Curve.Array.data[1].time
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _frequencyCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _intensityCurve.m_Curve.Array.data[0].value
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _frequencyCurve.m_Curve.Array.data[0].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _frequencyCurve.m_Curve.Array.data[1].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _intensityCurve.m_Curve.Array.data[0].inSlope
-      value: 4.8921814
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _intensityCurve.m_Curve.Array.data[1].inSlope
-      value: -0.02774632
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _frequencyCurve.m_Curve.Array.data[0].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _frequencyCurve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _frequencyCurve.m_Curve.Array.data[1].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _intensityCurve.m_Curve.Array.data[0].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _intensityCurve.m_Curve.Array.data[0].outSlope
-      value: 4.8921814
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _intensityCurve.m_Curve.Array.data[1].inWeight
-      value: 0.21249995
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _intensityCurve.m_Curve.Array.data[1].outSlope
-      value: -0.02774632
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _frequencyCurve.m_Curve.Array.data[0].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _intensityCurve.m_Curve.Array.data[0].outWeight
-      value: 0.058333337
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _frequencyCurve.m_Curve.Array.data[0].tangentMode
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _frequencyCurve.m_Curve.Array.data[1].tangentMode
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _intensityCurve.m_Curve.Array.data[0].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150126, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _intensityCurve.m_Curve.Array.data[1].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150127, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: textureObjects.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150127, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _textureObjects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150127, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: textureObjects.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150127, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: textureObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150127, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: textureObjects.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150127, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _textureObjects.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150127, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _textureObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150127, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _textureObjects.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150127, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _textureObjects.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150127, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _textureObjects.Array.data[4]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150127, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _textureObjects.Array.data[5]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972202724825150127, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _textureObjects.Array.data[6]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3973867044626942657, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: _circleRadius
-      value: 3.183
-      objectReference: {fileID: 0}
-    - target: {fileID: 3973867044626942657, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: HandPositions.Array.data[0]
-      value: 
-      objectReference: {fileID: 64026703}
-    - target: {fileID: 3973867044626942657, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: HandPositions.Array.data[1]
-      value: 
-      objectReference: {fileID: 1948043234}
-    - target: {fileID: 3973867044626942670, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3973867044626942670, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: m_Name
-      value: '[Haptics]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 3976390732710353160, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3976390732710353160, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3976390732710353160, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3976390732710353160, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3976390732710353160, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3976390732710353160, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3976390732710353160, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3976390732710353160, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3976390732710353160, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3976390732710353160, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3976390732710353160, guid: 6782cd160583aea4bb26a1a2e5724c49,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6782cd160583aea4bb26a1a2e5724c49, type: 3}
 --- !u!1 &1125239388
 GameObject:
   m_ObjectHideFlags: 0
@@ -4163,9 +3773,97 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ea79be653ce14db8969d7225d95ec6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1948043234 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 434850, guid: c8515ebee271c0649b9db1321f3026a4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1948043232}
-  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &491815809266285782
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4813018454497509205, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: _leapProvider
+      value: 
+      objectReference: {fileID: 268049249}
+    - target: {fileID: 4813018454497509205, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: _hands.Array.data[0].scanPosition
+      value: 
+      objectReference: {fileID: 1610273768}
+    - target: {fileID: 4813018454497509205, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: _hands.Array.data[1].scanPosition
+      value: 
+      objectReference: {fileID: 749731755}
+    - target: {fileID: 4813018454497509205, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: _hands.Array.data[0].hapticPosition
+      value: 
+      objectReference: {fileID: 1610273768}
+    - target: {fileID: 4813018454497509205, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: _hands.Array.data[1].hapticPosition
+      value: 
+      objectReference: {fileID: 749731755}
+    - target: {fileID: 7503645757500416434, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503645757500416434, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503645757500416434, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503645757500416434, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503645757500416434, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503645757500416434, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503645757500416434, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503645757500416434, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503645757500416434, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503645757500416434, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503645757500416434, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167266757381504184, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: m_Name
+      value: '[Haptics]'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6782cd160583aea4bb26a1a2e5724c49, type: 3}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3853338636146546530}
   - component: {fileID: 3853338636146546529}
   - component: {fileID: 3853338636146546528}
-  - component: {fileID: 5913770993682030272}
+  - component: {fileID: 8414379423699837856}
   m_Layer: 0
   m_Name: CubeTexturePrefab
   m_TagString: Untagged
@@ -56,10 +56,12 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a739a020b44611c4594753b275bec5fd, type: 2}
+  - {fileID: 2100000, guid: 54590e157af35574499a70f7aa7731f8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &3853338636146546528
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -90,11 +93,11 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5913770993682030272
+--- !u!114 &8414379423699837856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,14 +106,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3853338636146546543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6cdcd4eb616d5b4ca5f2756e099eded, type: 3}
+  m_Script: {fileID: 11500000, guid: d3dfcbd1cfb2d9e48806e58fb2800fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _heightMap: {fileID: 0}
-  _hapticSmoothness: 0
-  _minIntensity: 0
-  _maxIntensity: 0
-  _heightMapSize: {x: 0, y: 0, z: 0}
-  _heightMapPos: {x: 0, y: 0, z: 0}
-  _minBounds: {x: 0, y: 0, z: 0}
-  _maxBounds: {x: 0, y: 0, z: 0}
+  texture: {fileID: 0}
+  currentRenderer: {fileID: 3853338636146546529}
+  heightMap: {fileID: 2800000, guid: b8e3f770b66d272419b61a32db881a70, type: 3}
+  heightMapSize: {x: 0.2, y: 0.2, z: 0.2}
+  heightMapPos: {x: 0, y: 0.2, z: 0}
+  minBounds: {x: -0.1, y: 0, z: -0.1}
+  maxBounds: {x: 0.1, y: 0, z: 0.1}
