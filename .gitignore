@@ -14,7 +14,11 @@ __pycache__/
 
 # Visual Studio cache directory
 .vs/
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 .vsconfig
 app.config
 packages.config
