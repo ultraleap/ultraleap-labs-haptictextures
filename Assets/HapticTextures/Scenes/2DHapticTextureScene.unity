@@ -3480,7 +3480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07085dea088f46d4bbc9057db5765cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _leapProvider: {fileID: 1923873225}
+  _leapProvider: {fileID: 0}
 --- !u!114 &1923873228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3493,24 +3493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c592f16851a620743868a31232613370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _leapProvider: {fileID: 1923873225}
-  ModelPool:
-  - GroupName: 
-    _handModelManager: {fileID: 0}
-    LeftModel: {fileID: 778517450}
-    IsLeftToBeSpawned: 0
-    RightModel: {fileID: 17504545}
-    IsRightToBeSpawned: 0
-    IsEnabled: 1
-    CanDuplicate: 0
-  - GroupName: 
-    _handModelManager: {fileID: 0}
-    LeftModel: {fileID: 943239705}
-    IsLeftToBeSpawned: 0
-    RightModel: {fileID: 1760649902}
-    IsRightToBeSpawned: 0
-    IsEnabled: 1
-    CanDuplicate: 0
+  _leapProvider: {fileID: 0}
+  ModelPool: []
 --- !u!1001 &7636069455845006688
 PrefabInstance:
   m_ObjectHideFlags: 0
