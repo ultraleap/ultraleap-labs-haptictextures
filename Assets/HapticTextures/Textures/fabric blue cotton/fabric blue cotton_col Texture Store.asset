@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1f6ffde361ed6a46b90af80b68cf288, type: 3}
   m_Name: fabric blue cotton_col Texture Store
   m_EditorClassIdentifier: 
-  predictedRoughness: 0.6350235
-  predictedFrequency: 58.1
-  drawFrequency: 58.1
+  predictedRoughness: 0.6312784
+  predictedFrequency: 57.88
+  drawFrequency: 57.88
   intensityMin: 0.2
   intensityMax: 1

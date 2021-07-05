@@ -822,9 +822,9 @@ GameObject:
   m_Component:
   - component: {fileID: 140659499}
   - component: {fileID: 140659498}
-  - component: {fileID: 140659497}
   - component: {fileID: 140659496}
   - component: {fileID: 140659495}
+  - component: {fileID: 140659497}
   m_Layer: 0
   m_Name: PlaneLeft
   m_TagString: Untagged
@@ -832,40 +832,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &140659495
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 140659494}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &140659496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 140659494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3dfcbd1cfb2d9e48806e58fb2800fe6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  texture: {fileID: 0}
-  currentRenderer: {fileID: 140659497}
-  heightMap: {fileID: 2800000, guid: b045dee532fac4e47ad48b3c73f75335, type: 3}
-  heightMapSize: {x: 0.26149982, y: 0.09389427, z: 0.252931}
-  heightMapPos: {x: -0.16, y: 0.2, z: 0}
-  minBounds: {x: -0.2907499, y: 0, z: -0.1264655}
-  maxBounds: {x: -0.029250085, y: 0, z: 0.1264655}
---- !u!23 &140659497
+--- !u!23 &140659495
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -906,6 +873,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &140659496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140659494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3dfcbd1cfb2d9e48806e58fb2800fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture: {fileID: 11400000, guid: 8a243daeb3ec05741bf65229619e6b73, type: 2}
+  currentRenderer: {fileID: 140659495}
+  heightMap: {fileID: 2800000, guid: b045dee532fac4e47ad48b3c73f75335, type: 3}
+  heightMapSize: {x: 0.22227488, y: 0.079810135, z: 0.21499138}
+  heightMapPos: {x: -0.12, y: 0.2, z: 0}
+  minBounds: {x: -0.23113744, y: 0, z: -0.10749569}
+  maxBounds: {x: -0.008862555, y: 0, z: 0.10749569}
+--- !u!64 &140659497
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140659494}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &140659498
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -922,8 +922,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140659494}
   m_LocalRotation: {x: -0.2336785, y: -0.251131, z: -0.06261396, w: 0.93723375}
-  m_LocalPosition: {x: -0.16, y: 0.2, z: 0}
-  m_LocalScale: {x: 0.02, y: 1, z: 0.02}
+  m_LocalPosition: {x: -0.12, y: 0.2, z: 0}
+  m_LocalScale: {x: 0.017, y: 1, z: 0.017}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -2046,8 +2046,8 @@ GameObject:
   - component: {fileID: 636902340}
   - component: {fileID: 636902339}
   - component: {fileID: 636902338}
-  - component: {fileID: 636902341}
   - component: {fileID: 636902337}
+  - component: {fileID: 636902341}
   m_Layer: 0
   m_Name: PlaneRight
   m_TagString: Untagged
@@ -2055,21 +2055,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &636902337
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 636902336}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &636902338
+--- !u!23 &636902337
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2110,6 +2096,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &636902338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636902336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3dfcbd1cfb2d9e48806e58fb2800fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture: {fileID: 11400000, guid: f3488a5f6e83c3b44877bafae0ac38db, type: 2}
+  currentRenderer: {fileID: 636902337}
+  heightMap: {fileID: 2800000, guid: 793ed8b5aa611284d8f0d3813cc83e6a, type: 3}
+  heightMapSize: {x: 0.22227488, y: 0.07981014, z: 0.2149914}
+  heightMapPos: {x: 0.12, y: 0.2, z: 0}
+  minBounds: {x: 0.008862555, y: 0, z: -0.1074957}
+  maxBounds: {x: 0.23113744, y: 0, z: 0.1074957}
 --- !u!33 &636902339
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2126,31 +2131,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636902336}
   m_LocalRotation: {x: -0.2336785, y: 0.25113106, z: 0.06261398, w: 0.93723375}
-  m_LocalPosition: {x: 0.16, y: 0.2, z: 0}
-  m_LocalScale: {x: 0.02, y: 1, z: 0.02}
+  m_LocalPosition: {x: 0.12, y: 0.2, z: 0}
+  m_LocalScale: {x: 0.017, y: 1, z: 0.017}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -28, y: 30, z: 0}
---- !u!114 &636902341
-MonoBehaviour:
+--- !u!64 &636902341
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636902336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3dfcbd1cfb2d9e48806e58fb2800fe6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  texture: {fileID: 11400000, guid: f3488a5f6e83c3b44877bafae0ac38db, type: 2}
-  currentRenderer: {fileID: 636902338}
-  heightMap: {fileID: 2800000, guid: 793ed8b5aa611284d8f0d3813cc83e6a, type: 3}
-  heightMapSize: {x: 0.26149985, y: 0.09389427, z: 0.25293106}
-  heightMapPos: {x: 0.16, y: 0.2, z: 0}
-  minBounds: {x: 0.02925007, y: 0, z: -0.12646553}
-  maxBounds: {x: 0.2907499, y: 0, z: 0.12646553}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &749731755 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 467038, guid: c8515ebee271c0649b9db1321f3026a4,
@@ -3780,6 +3780,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4813018454497509205, guid: 6782cd160583aea4bb26a1a2e5724c49,
+        type: 3}
+      propertyPath: _hapticRadius
+      value: 0.025
+      objectReference: {fileID: 0}
     - target: {fileID: 4813018454497509205, guid: 6782cd160583aea4bb26a1a2e5724c49,
         type: 3}
       propertyPath: _leapProvider

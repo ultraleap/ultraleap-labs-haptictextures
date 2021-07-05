@@ -9,8 +9,7 @@ This repository contains the following:
 * Two simple (2D & 3D) demo scenes presenting their application in 2D and 3D environments.
 * A small repository of sample textures.
 * Prefab gameobjects with corresponding texture components attached: 
-	- 2D Plane gameobject.
-	- 3D Cube demo gameobject.
+	- A [Haptics] component with some pre-attached haptics script and preset values. 
 
 This Unity project can be run on both Ultrahaptics "STRATOS" series hardware (Inspire & Explore).
 

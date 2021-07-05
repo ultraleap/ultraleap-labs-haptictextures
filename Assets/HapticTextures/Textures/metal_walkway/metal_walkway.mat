@@ -75,7 +75,7 @@ Material:
     - _Displacement: 0.215
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 1
     - _GlossyReflections: 1
     - _HapticIntensityMaximum: 1
     - _HapticIntensityMinimum: 0.5
