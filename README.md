@@ -45,7 +45,15 @@ To explore this project and create your own haptic textures some requirements mu
 1. Download the project and copy it into your relevant workspace. 
 2. Navigate to the appropriate folder in your Unity Hub / Unity Standalone and open the project.
 3. Once open you will see a host of errors, but don't panic. The steps below will address these:
-	- Import the Leap Motion Core Assets Unity package, and the Ultrahaptics Unity package into the project (found in your Ultrahaptics SDK folder). When prompted, press "Import".
+	- Import the Leap Motion Core Assets Unity package, and the following Ultraleap-Haptics Unity .dlls (Create a separate folder in Assets/Plugins/):
+		Serilog.dll
+		Serilog.Sinks.Async.dll
+		Serilog.Sinks.Console.dll
+		Serilog.Sinks.File.dll
+		System.Buffers.dll
+		UltraleapHaptics.NET.deps.json
+		UltraleapHaptics.NET.dll
+	- When prompted, press "Import".
 4. The project should now be ready to use!
 	- **TIP:** *It is worth double-checking that the LeapHandController Gameobject in the scene contains the HandData.cs script found in: /Assets/Scripts/HandData*
 
